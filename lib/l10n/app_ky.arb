@@ -1,4 +1,12 @@
 {
-  "language": "kyrgyz",
-  "welcome": "Кош келиңиз"
+  "language": "Кыргызча",
+  "welcome": "Кош келиңиз",
+  "mainFood": "Негизги тамак",
+  "scroll": "Башка позицияларды көрүү үчүн, солго сүрүңүз",
+  "kattama": "Каттама",
+  "service": "Кызмат 10%",
+  "menu": "Меню",
+  "food": "Тамактар",
+  "milkPosition": "Сүт азыктары",
+  "traditionalDrinks": "Салттуу суусундуктар"
 }

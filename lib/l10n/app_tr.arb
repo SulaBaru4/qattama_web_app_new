@@ -1,4 +1,13 @@
 {
-  "language": "turkish",
-  "welcome": "Hoş geldiniz!"
+  "language": "Türkçe",
+  "welcome": "Hoş geldiniz!",
+  "mainFood": "Ana Yemek",
+  "scroll": "Daha fazla pozisyon görmek için sola kaydırın",
+  "kattama": "Sade Katlama",
+  "service": "Servis 10%",
+  "menu": "Menü",
+  "food": "Yemekler",
+  "milkPosition": "Süt Ürünleri",
+  "traditionalDrinks": "Geleneksel İçecekler"
+
 }

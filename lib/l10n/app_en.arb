@@ -3,5 +3,14 @@
   "@language": {
     "description": "The Current Language"
   },
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "mainFood": "Main food",
+  "scroll": "Swipe left to see more positions",
+  "kattama": "Qattama",
+  "service": "Service = 10%",
+  "menu": "Menu",
+  "food": "Dishes",
+  "milkPosition": "Dairy Product",
+  "traditionalDrinks": "Traditional Drinks"
 }
+
