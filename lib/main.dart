@@ -1,9 +1,11 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:qattama_web_app/pages/dishes.dart';
+import 'package:qattama_web_app/pages/milk_positions.dart';
+import 'package:qattama_web_app/pages/traditional_drinks.dart';
 import 'package:qattama_web_app/providers/locale_provider.dart';
 import 'package:qattama_web_app/widgets/locale_switcher_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -297,17 +299,24 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/plow.jpg'),
-                          fit: BoxFit.fill),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const DishesPage())
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage('assets/images/plow.jpg'),
+                            fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                 ),
@@ -326,18 +335,25 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage(
-                              'assets/images/snacks/traditionalsnacks/kurut.png'),
-                          fit: BoxFit.fill),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const MilkPositions())
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage(
+                                'assets/images/snacks/traditionalsnacks/kurut.png'),
+                            fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                 ),
@@ -356,25 +372,32 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/kymyz.jpg'),
-                          fit: BoxFit.fill),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const TraditionalDrinksPage())
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage('assets/images/kymyz.jpg'),
+                            fit: BoxFit.fill),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
