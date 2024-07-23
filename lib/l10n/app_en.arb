@@ -7,7 +7,7 @@
   "mainFood": "Main food",
   "scroll": "Swipe left to see more positions",
   "kattama": "Qattama",
-  "service": "Service = 10%",
+  "service": "Service 10%",
   "menu": "Menu",
   "food": "Dishes",
   "milkPosition": "Dairy Product",
@@ -33,6 +33,10 @@
   "description": "Description",
   "milkTea": "Milk Tea",
   "milkteaPrice1L": "130som/1l",
-  "milkteaPrice15L": "180som/1.5l"
+  "milkteaPrice15L": "180som/1.5l",
+  "kurut": "Kurut",
+  "kurutPrice": "15som/1pcs",
+  "kymyz": "Kymyz",
+  "kymyzPrice": "250som/1l"
 }
 

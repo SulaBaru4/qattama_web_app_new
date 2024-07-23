@@ -4,7 +4,7 @@
   "mainFood": "Негизги тамак",
   "scroll": "Башка позицияларды көрүү үчүн, солго сүрүңүз",
   "kattama": "Каттама",
-  "service": "Кызмат 10%",
+  "service": "Тейлөө 10%",
   "menu": "Меню",
   "food": "Тамактар",
   "milkPosition": "Сүт азыктары",
@@ -21,7 +21,7 @@
   "blackteaPrice15L": "120сом/1.5л",
   "greentea": "Көк чай",
   "greenteaPrice1L": "80сом/1л",
-  "greenteaPrice15L": "120сом/1л",
+  "greenteaPrice15L": "120сом/1.5л",
   "pelmeniPrice": "230сом/порциясы",
   "mantiPrice": "270сом/порциясы",
   "kattamaPrice": "150сом",
@@ -30,5 +30,9 @@
   "manti": "Манты",
   "milkTea": "Сүт чай",
   "milkteaPrice1L": "130сом/1л",
-  "milkteaPrice15L": "180сом/1.5л"
+  "milkteaPrice15L": "180сом/1.5л",
+  "kurut": "Курут",
+  "kurutPrice": "15сом/1даана",
+  "kymyz": "Кымыз",
+  "kymyzPrice": "250сом/1л"
 }

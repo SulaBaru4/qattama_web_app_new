@@ -32,6 +32,61 @@ class PositionsPage extends StatefulWidget {
 }
 
 class _PositionsPageState extends State<PositionsPage> {
+  final GlobalKey _keyPelmeniSoup = GlobalKey();
+  final GlobalKey _keyKattama = GlobalKey();
+  final GlobalKey _keyManti = GlobalKey();
+  bool _isExpandedPelmeniSoup = false;
+  bool _isExpandedKattama = false;
+  bool _isExpandedManti = false;
+
+  void _toggleDescriptionManti() {
+    setState(() {
+      _isExpandedManti = !_isExpandedManti;
+    });
+
+    if (_isExpandedManti) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(
+          _keyManti.currentContext!,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      });
+    }
+  }
+
+  void _toggleDescriptionKattama() {
+    setState(() {
+      _isExpandedKattama = !_isExpandedKattama;
+    });
+
+    if (_isExpandedKattama) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(
+          _keyKattama.currentContext!,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      });
+    }
+  }
+
+  void _toggleDescriptionPelmeniSoup() {
+    setState(() {
+      _isExpandedPelmeniSoup = !_isExpandedPelmeniSoup;
+    });
+
+    if (_isExpandedPelmeniSoup) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(
+          _keyPelmeniSoup.currentContext!,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -98,21 +153,24 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionKattama,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -120,6 +178,7 @@ class _PositionsPageState extends State<PositionsPage> {
                 ),
               ),
             ),
+            if (_isExpandedKattama) _buildDescriptionSectionKattama(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -171,21 +230,24 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionPelmeniSoup,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -193,6 +255,7 @@ class _PositionsPageState extends State<PositionsPage> {
                 ),
               ),
             ),
+            if (_isExpandedPelmeniSoup) _buildDescriptionSectionPelmeniSoup(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -244,28 +307,132 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionManti,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
                   ],
                 ),
               ),
-            )
+            ),
+            if (_isExpandedManti) _buildDescriptionSectionManti(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDescriptionSectionManti() {
+    return AnimatedContainer(
+      padding: const EdgeInsets.all(20),
+      key: _keyManti,
+      duration: const Duration(milliseconds: 300),
+      height: _isExpandedManti ? 300 : 0,
+      child: const SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(children: [
+            Text(
+              'Ата-бабаларыбыздын салты боюнча сүйүү менен, этинен жасалган манты',
+              style: TextStyle(
+                  color: Color(0xFF6A041D),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500),
+            ),
+            Divider(
+              color: Colors.transparent,
+            ),
+            Text(
+              'Курамы: уй эти, пияз, камыр, картошка',
+              style: TextStyle(
+                  color: Color(0xFF6A041D),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500),
+            ),
+          ])),
+    );
+  }
+
+  Widget _buildDescriptionSectionKattama() {
+    return AnimatedContainer(
+      padding: const EdgeInsets.all(20),
+      key: _keyKattama,
+      duration: const Duration(milliseconds: 300),
+      height: _isExpandedKattama ? 170 : 0,
+      child: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Text(
+              'Кыргыздын улуттук наны Каттама.',
+              style: TextStyle(
+                color: Color(0xFF6A041D),
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            Divider(
+              color: Colors.transparent,
+            ),
+            Text(
+              'Курамы: ун, суу,сары май, туз.',
+              style: TextStyle(
+                color: Color(0xFF6A041D),
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDescriptionSectionPelmeniSoup() {
+    return AnimatedContainer(
+      padding: const EdgeInsets.all(20),
+      key: _keyPelmeniSoup,
+      duration: const Duration(milliseconds: 300),
+      height: _isExpandedPelmeniSoup ? 250 : 0,
+      child: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Text(
+              'Description: In this soup, each dumpling is like a separate work of art, floating in a fragrant broth.',
+              style: TextStyle(
+                color: Color(0xFF6A041D),
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            Divider(
+              color: Colors.transparent,
+            ),
+            Text(
+              'Ingredients: Fresh dumplings, aromatic broth, seasonings.',
+              style: TextStyle(
+                color: Color(0xFF6A041D),
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
         ),
       ),

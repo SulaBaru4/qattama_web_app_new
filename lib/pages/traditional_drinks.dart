@@ -32,6 +32,67 @@ class PositionsPage extends StatefulWidget {
 }
 
 class _PositionsPageState extends State<PositionsPage> {
+  final GlobalKey _keyMilkTea = GlobalKey();
+  final GlobalKey _keyBlackTea = GlobalKey();
+  final GlobalKey _keyGreenTea = GlobalKey();
+  final GlobalKey _keyKymyz = GlobalKey();
+
+  bool _isExpandedMilkTea = false;
+  bool _isExpandedBlackTea = false;
+  bool _isExpandedGreenTea = false;
+  bool _isExpandedKymyz= false;
+
+  void _toggleDescriptionKymyz() {
+    setState(() {
+      _isExpandedKymyz = !_isExpandedKymyz;
+    });
+    if (_isExpandedKymyz) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(
+          _keyKymyz.currentContext!,
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+        );
+      });
+    }
+  }
+  void _toggleDescriptionBlackTea() {
+    setState(() {
+      _isExpandedBlackTea = !_isExpandedBlackTea;
+    });
+
+    if (_isExpandedBlackTea) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(_keyBlackTea.currentContext!,
+            duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+      });
+    }
+  }
+  void _toggleDescriptionMilkTea() {
+    setState(() {
+      _isExpandedMilkTea = !_isExpandedMilkTea;
+    });
+
+    if (_isExpandedMilkTea) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(_keyMilkTea.currentContext!,
+            duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+      });
+    }
+  }
+  void _toggleDescriptionGreenTea() {
+    setState(() {
+      _isExpandedGreenTea = !_isExpandedGreenTea;
+    });
+
+    if (_isExpandedGreenTea) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        Scrollable.ensureVisible(_keyGreenTea.currentContext!,
+            duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,6 +108,80 @@ class _PositionsPageState extends State<PositionsPage> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Text(
+                  AppLocalizations.of(context)!.kymyz,
+                  style: const TextStyle(
+                    color: Color(0xFF6A041D),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Text(
+                  AppLocalizations.of(context)!.kymyzPrice,
+                  style: const TextStyle(
+                    color: Color(0xFF6A041D),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 193 * 1.3,
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50.0),
+                      image: const DecorationImage(
+                          image: AssetImage("assets/images/bar/traditionalbar/kymyz.png"),
+                          fit: BoxFit.fill),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: const Offset(0, 3),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: _toggleDescriptionKymyz,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 80,
+                padding:  const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(AppLocalizations.of(context)!.description,
+                      style: const TextStyle(
+                        color: Color(0xFF6A041D),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 30,
+                      ),),
+                    const Icon(Icons.arrow_drop_down_sharp,
+                      color: Color(0xFF6A041D),
+                      size: 30,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            if (_isExpandedKymyz) _buildDescriptionSectionKymyz(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -112,7 +247,7 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionMilkTea,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
@@ -134,6 +269,8 @@ class _PositionsPageState extends State<PositionsPage> {
                 ),
               ),
             ),
+            if (_isExpandedMilkTea) _buildDescriptionSectionMilkTea(),
+
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -199,7 +336,7 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionBlackTea,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
@@ -221,6 +358,8 @@ class _PositionsPageState extends State<PositionsPage> {
                 ),
               ),
             ),
+            if (_isExpandedBlackTea) _buildDescriptionSectionBlackTea(),
+
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -286,7 +425,7 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: _toggleDescriptionGreenTea,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
@@ -307,10 +446,83 @@ class _PositionsPageState extends State<PositionsPage> {
                   ],
                 ),
               ),
-            )
+            ),
+            if (_isExpandedGreenTea) _buildDescriptionSectionGreenTea(),
           ],
         ),
       ),
     );
   }
+  Widget _buildDescriptionSectionKymyz() {
+    return AnimatedContainer(
+        padding: const EdgeInsets.all(20),
+        key: _keyKymyz,
+        duration: const Duration(milliseconds: 300),
+        height: _isExpandedKymyz ? 200 : 0,
+        child: const SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Text(
+                "Description: Kymyz is a fermented drink made from mare's milk with a unique sour taste. Source of probiotics and beneficial bacteria.",
+                style: TextStyle(
+                  color: Color(0xFF6A041D),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        )
+    );
+  }
+  Widget _buildDescriptionSectionGreenTea() {
+    return AnimatedContainer(
+        padding: const EdgeInsets.all(20),
+        key: _keyGreenTea,
+        duration: const Duration(milliseconds: 300),
+        height: _isExpandedGreenTea ? 200 : 0,
+        child: const SingleChildScrollView(child: Text(
+          'Description: Green tea, known for its beneficial properties. Volume options: 1l and 1.5l. Perfectly tones and refreshes.',
+          style: TextStyle(
+            color: Color(0xFF6A041D),
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        ));
+  }
+  Widget _buildDescriptionSectionBlackTea() {
+    return AnimatedContainer(
+        padding: const EdgeInsets.all(20),
+        key: _keyBlackTea,
+        duration: const Duration(milliseconds: 300),
+        height: _isExpandedBlackTea ? 200 : 1,
+        child: const SingleChildScrollView(child: Text(
+          'Description: Classic black tea, rich taste and aroma. Volume options: 1l and 1.5l. An excellent choice for any time of the day.',
+          style: TextStyle(
+            color: Color(0xFF6A041D),
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        ));
+  }
+  Widget _buildDescriptionSectionMilkTea() {
+    return AnimatedContainer(
+        padding: const EdgeInsets.all(20),
+        key: _keyMilkTea,
+        duration: const Duration(milliseconds: 300),
+        height: _isExpandedMilkTea ? 200 : 1,
+        child: const SingleChildScrollView(child: Text(
+          'Description: Fruit tea, perfect for cold days or before bed. A natural source of vitamins and antioxidants.',
+          style: TextStyle(
+            color: Color(0xFF6A041D),
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        ));
+  }
 }
+

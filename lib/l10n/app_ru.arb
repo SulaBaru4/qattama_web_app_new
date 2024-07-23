@@ -21,7 +21,7 @@
   "blackteaPrice15L": "120сом/1.5л",
   "greentea": "Зелёный Чай",
   "greenteaPrice1L": "80сом/1л",
-  "greenteaPrice15L": "120сом/1л",
+  "greenteaPrice15L": "120сом/1.5л",
   "pelmeniPrice": "230сом/порция",
   "mantiPrice": "270сом/порция",
   "kattamaPrice": "150сом",
@@ -30,5 +30,9 @@
   "manti": "Манты",
   "milkTea": "Чай с молоком",
   "milkteaPrice1L": "130сом/1л",
-  "milkteaPrice15L": "180сом/1.5л"
+  "milkteaPrice15L": "180сом/1.5л",
+  "kurut": "Курут",
+  "kurutPrice": "15сом/1шт",
+  "kymyz": "Кымыз",
+  "kymyzPrice": "250сом/1л"
 }

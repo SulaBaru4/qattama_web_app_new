@@ -96,42 +96,13 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/images/background.jpg
-    - assets/images/soups.jpg
-    - assets/images/plow.jpg
-    - assets/images/salads.jpg
-    - assets/images/boorsok.jpg
-    - assets/images/breakfast.jpg
     - assets/images/kymyz.jpg
     - assets/images/kattama.jpeg
-    - assets/images/cold.jpg
     - assets/images/tea.jpg
-    - assets/images/food/mainfood/beshbarmak.png
-    - assets/images/food/mainfood/kuurdak.png
     - assets/images/food/mainfood/manti.png
-    - assets/images/food/soups/gorokhsup.png
-    - assets/images/food/soups/mercimek.png
     - assets/images/food/soups/pelmeni.png
-    - assets/images/food/soups/shorpo.png
-    - assets/images/food/salads/caesar.png
-    - assets/images/food/salads/carrotsalad.png
-    - assets/images/food/salads/greeksalad.png
-    - assets/images/food/salads/spicycarrot.png
-    - assets/images/food/breakfast/menemen.png
-    - assets/images/food/breakfast/turkishbreakfast.png
     - assets/images/snacks/traditionalsnacks/kurut.png
-    - assets/images/snacks/traditionalsnacks/talkankurut.png
-    - assets/images/snacks/bread/blackbread.png
-    - assets/images/snacks/bread/tandyrnan.png
-    - assets/images/snacks/bread/whitebread.png
-    - assets/images/bar/coldbar/berryslemonade.png
-    - assets/images/bar/coldbar/citruslemonade.png
-    - assets/images/bar/coldbar/coldsoda.png
-    - assets/images/bar/coldbar/juices.png
-    - assets/images/bar/coldbar/limonade.png
-    - assets/images/bar/coldbar/mojitolemonade.png
     - assets/images/bar/hotbar/blacktea.png
-    - assets/images/bar/hotbar/fruittea.png
     - assets/images/bar/hotbar/greentea.png
     - assets/images/bar/hotbar/milktea.png
     - assets/images/bar/traditionalbar/chalap.png
@@ -139,6 +110,9 @@ flutter:
     - assets/images/bar/traditionalbar/maksym.png
     - assets/images/art3.png
     - assets/images/Artboard2.png
+    - assets/images/snacks/kaymak.jpg
+    - assets/images/snacks/suzma.jpg
+    - assets/images/bar/ayran.jpg
 
   fonts:
     - family: Gothic

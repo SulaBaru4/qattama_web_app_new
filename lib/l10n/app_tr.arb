@@ -21,7 +21,7 @@
   "blackteaPrice15L": "120som/1.5l",
   "greentea": "Yeşil Çay",
   "greenteaPrice1L": "80som/1l",
-  "greenteaPrice15L": "120som/1l",
+  "greenteaPrice15L": "120som/1.5l",
   "pelmeniPrice": "230som/porsiyon",
   "mantiPrice": "270som/porsiyon",
   "kattamaPrice": "150som",
@@ -30,5 +30,9 @@
   "manti": "Kyrgyz Mantı",
   "milkTea": "Sütlü Çay",
   "milkteaPrice1L": "130som/1l",
-  "milkteaPrice15L": "180som/1.5l"
+  "milkteaPrice15L": "180som/1.5l",
+  "kurut": "Kurut",
+  "kurutPrice": "15som/1adet",
+  "kymyz": "Kımız",
+  "kymyzPrice": "250som/1l"
 }

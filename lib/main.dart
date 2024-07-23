@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -25,7 +26,11 @@ class MyApp extends StatelessWidget {
         final provider = Provider.of<LocaleProvider>(context);
         return MaterialApp(
           title: 'Qattama',
-          theme: ThemeData(),
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              iconTheme: IconThemeData(color: Color(0xFFEFDEBE),size: 30)
+            ),
+          ),
           supportedLocales: AppLocalizations.supportedLocales,
           locale: provider.locale,
           localizationsDelegates: const [
@@ -57,9 +62,11 @@ class SelectionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: const [
+
+        actions: [
           LocaleSwitcherWidgets(),
-          SizedBox(
+          Container(
+            color: const Color(0xFF6A041D),
             width: 12,
           )
         ],
@@ -314,7 +321,7 @@ class SecondPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50.0),
                         image: const DecorationImage(
-                            image: AssetImage('assets/images/plow.jpg'),
+                            image: AssetImage('assets/images/food/mainfood/manti.png'),
                             fit: BoxFit.fill),
                       ),
                     ),
