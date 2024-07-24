@@ -11,6 +11,7 @@ import 'package:qattama_web_app/providers/locale_provider.dart';
 import 'package:qattama_web_app/widgets/locale_switcher_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
   runApp(const MyApp());
@@ -498,8 +499,8 @@ class _ThirdPageState extends State<ThirdPage> {
                   child: IconButton(
                     onPressed: () async {
                       const url = 'https://www.instagram.com/qattama_bish';
-                      if (await canLaunch(url)) {
-                        await launch(url);
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
                       } else {
                         throw 'Could not launch $url';
                       }
@@ -545,8 +546,8 @@ class _ThirdPageState extends State<ThirdPage> {
                   child: IconButton(
                     onPressed: () async {
                       const url = 'https://www.instagram.com/qattama_bish';
-                      if (await canLaunch(url)) {
-                        await launch(url);
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
                       } else {
                         throw 'Could not launch $url';
                       }
@@ -592,8 +593,8 @@ class _ThirdPageState extends State<ThirdPage> {
                   child: IconButton(
                     onPressed: () async {
                       const url = 'https://2gis.kg/bishkek/firm/70000001049847928';
-                      if (await canLaunch(url)) {
-                        await launch(url);
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
                       } else {
                         throw 'Could not launch $url';
                       }
@@ -630,7 +631,7 @@ class _ThirdPageState extends State<ThirdPage> {
                         ),
                         softWrap: true,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
+                        maxLines: 4,
                       ),
                     ),
                   ),
@@ -642,8 +643,8 @@ class _ThirdPageState extends State<ThirdPage> {
                       IconButton(
                         onPressed: () async {
                           const url = 'https://www.linkedin.com/in/sultan-aitmatov-85a940315/';
-                          if (await canLaunch(url)) {
-                            await launch(url);
+                          if (await canLaunchUrlString(url)) {
+                            await launchUrlString(url);
                           } else {
                             throw 'Could not launch $url';
                           }
@@ -657,8 +658,8 @@ class _ThirdPageState extends State<ThirdPage> {
                       IconButton(
                         onPressed: () async {
                           const url = 'https://t.me/+Ws4tH-QyUEBmOTE6';
-                          if (await canLaunch(url)) {
-                            await launch(url);
+                          if (await canLaunchUrlString(url)) {
+                            await launchUrlString(url);
                           } else {
                             throw 'Could not launch $url';
                           }
