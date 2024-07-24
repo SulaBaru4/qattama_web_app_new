@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MilkPositions extends StatefulWidget {
   const MilkPositions({super.key});
@@ -25,7 +24,7 @@ class _MilkPositionsState extends State<MilkPositions> {
               fontFamily: 'Gothic'),
         ),
       ),
-      body: PositionsPage(),
+      body: const PositionsPage(),
     );
   }
 }
@@ -443,21 +442,13 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyKaymak,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedKaymak ? 300 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Description: Kurut is a traditional Kyrgyz snack. Rich in taste and beneficial properties',
-              style: TextStyle(
-                color: Color(0xFF6A041D),
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Text(
-              'Ingredients: natural suzmo, salt.',
-              style: TextStyle(
+              AppLocalizations.of(context)!.descriptionKaymak,
+              style: const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -475,21 +466,13 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyAyran,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedAyran ? 300 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Description: Kurut is a traditional Kyrgyz snack. Rich in taste and beneficial properties',
-              style: TextStyle(
-                color: Color(0xFF6A041D),
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Text(
-              'Ingredients: natural suzmo, salt.',
-              style: TextStyle(
+            AppLocalizations.of(context)!.descriptionAyran,
+              style:const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -507,21 +490,13 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyKurut,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedKurut ? 300 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Description: Kurut is a traditional Kyrgyz snack. Rich in taste and beneficial properties',
-              style: TextStyle(
-                color: Color(0xFF6A041D),
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Text(
-              'Ingredients: natural suzmo, salt.',
-              style: TextStyle(
+            AppLocalizations.of(context)!.kurut,
+              style: const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -538,21 +513,13 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keySuzmo,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedSuzmo ? 300 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Description: Kurut is a traditional Kyrgyz snack. Rich in taste and beneficial properties',
-              style: TextStyle(
-                color: Color(0xFF6A041D),
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Text(
-              'Ingredients: natural suzmo, salt.',
-              style: TextStyle(
+            AppLocalizations.of(context)!.descriptionSuzmo,
+        style: const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,

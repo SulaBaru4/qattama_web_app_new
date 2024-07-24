@@ -40,6 +40,7 @@ dependencies:
   intl: any
   provider: ^6.1.2
   smooth_page_indicator: ^1.2.0+3
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -113,6 +114,10 @@ flutter:
     - assets/images/snacks/kaymak.jpg
     - assets/images/snacks/suzma.jpg
     - assets/images/bar/ayran.jpg
+    - assets/images/instagram1.png
+    - assets/images/linkedin1.png
+    - assets/images/whatsapp1.png
+    - assets/images/twogis1.png
 
   fonts:
     - family: Gothic

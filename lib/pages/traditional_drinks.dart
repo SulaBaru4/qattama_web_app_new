@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 class TraditionalDrinksPage extends StatelessWidget {
   const TraditionalDrinksPage({super.key});
@@ -20,10 +19,11 @@ class TraditionalDrinksPage extends StatelessWidget {
               fontFamily: 'Gothic'),
         ),
       ),
-      body: PositionsPage(),
+      body: const PositionsPage(),
     );
   }
 }
+
 class PositionsPage extends StatefulWidget {
   const PositionsPage({super.key});
 
@@ -40,7 +40,7 @@ class _PositionsPageState extends State<PositionsPage> {
   bool _isExpandedMilkTea = false;
   bool _isExpandedBlackTea = false;
   bool _isExpandedGreenTea = false;
-  bool _isExpandedKymyz= false;
+  bool _isExpandedKymyz = false;
 
   void _toggleDescriptionKymyz() {
     setState(() {
@@ -56,6 +56,7 @@ class _PositionsPageState extends State<PositionsPage> {
       });
     }
   }
+
   void _toggleDescriptionBlackTea() {
     setState(() {
       _isExpandedBlackTea = !_isExpandedBlackTea;
@@ -68,6 +69,7 @@ class _PositionsPageState extends State<PositionsPage> {
       });
     }
   }
+
   void _toggleDescriptionMilkTea() {
     setState(() {
       _isExpandedMilkTea = !_isExpandedMilkTea;
@@ -80,6 +82,7 @@ class _PositionsPageState extends State<PositionsPage> {
       });
     }
   }
+
   void _toggleDescriptionGreenTea() {
     setState(() {
       _isExpandedGreenTea = !_isExpandedGreenTea;
@@ -145,7 +148,8 @@ class _PositionsPageState extends State<PositionsPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.0),
                       image: const DecorationImage(
-                          image: AssetImage("assets/images/bar/traditionalbar/kymyz.png"),
+                          image: AssetImage(
+                              "assets/images/bar/traditionalbar/kymyz.png"),
                           fit: BoxFit.fill),
                       boxShadow: [
                         BoxShadow(
@@ -163,17 +167,20 @@ class _PositionsPageState extends State<PositionsPage> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -233,7 +240,8 @@ class _PositionsPageState extends State<PositionsPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.0),
                       image: const DecorationImage(
-                          image: AssetImage("assets/images/bar/hotbar/milktea.png"),
+                          image: AssetImage(
+                              "assets/images/bar/hotbar/milktea.png"),
                           fit: BoxFit.fill),
                       boxShadow: [
                         BoxShadow(
@@ -251,17 +259,20 @@ class _PositionsPageState extends State<PositionsPage> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -270,7 +281,6 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             if (_isExpandedMilkTea) _buildDescriptionSectionMilkTea(),
-
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -322,7 +332,8 @@ class _PositionsPageState extends State<PositionsPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.0),
                       image: const DecorationImage(
-                          image: AssetImage("assets/images/bar/hotbar/blacktea.png"),
+                          image: AssetImage(
+                              "assets/images/bar/hotbar/blacktea.png"),
                           fit: BoxFit.fill),
                       boxShadow: [
                         BoxShadow(
@@ -340,17 +351,20 @@ class _PositionsPageState extends State<PositionsPage> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -359,7 +373,6 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ),
             if (_isExpandedBlackTea) _buildDescriptionSectionBlackTea(),
-
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
               width: MediaQuery.of(context).size.width,
@@ -411,7 +424,8 @@ class _PositionsPageState extends State<PositionsPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.0),
                       image: const DecorationImage(
-                          image: AssetImage("assets/images/bar/hotbar/greentea.png"),
+                          image: AssetImage(
+                              "assets/images/bar/hotbar/greentea.png"),
                           fit: BoxFit.fill),
                       boxShadow: [
                         BoxShadow(
@@ -429,17 +443,20 @@ class _PositionsPageState extends State<PositionsPage> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 80,
-                padding:  const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(AppLocalizations.of(context)!.description,
+                    Text(
+                      AppLocalizations.of(context)!.description,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
                         fontSize: 30,
-                      ),),
-                    const Icon(Icons.arrow_drop_down_sharp,
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
                       size: 30,
                     ),
@@ -453,19 +470,20 @@ class _PositionsPageState extends State<PositionsPage> {
       ),
     );
   }
+
   Widget _buildDescriptionSectionKymyz() {
     return AnimatedContainer(
         padding: const EdgeInsets.all(20),
         key: _keyKymyz,
         duration: const Duration(milliseconds: 300),
         height: _isExpandedKymyz ? 200 : 0,
-        child: const SingleChildScrollView(
+        child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
               Text(
-                "Description: Kymyz is a fermented drink made from mare's milk with a unique sour taste. Source of probiotics and beneficial bacteria.",
-                style: TextStyle(
+              AppLocalizations.of(context)!.descriptionKymyz,
+                style: const TextStyle(
                   color: Color(0xFF6A041D),
                   fontSize: 24,
                   fontWeight: FontWeight.w500,
@@ -473,56 +491,60 @@ class _PositionsPageState extends State<PositionsPage> {
               ),
             ],
           ),
-        )
-    );
+        ));
   }
+
   Widget _buildDescriptionSectionGreenTea() {
     return AnimatedContainer(
         padding: const EdgeInsets.all(20),
         key: _keyGreenTea,
         duration: const Duration(milliseconds: 300),
         height: _isExpandedGreenTea ? 200 : 0,
-        child: const SingleChildScrollView(child: Text(
-          'Description: Green tea, known for its beneficial properties. Volume options: 1l and 1.5l. Perfectly tones and refreshes.',
-          style: TextStyle(
-            color: Color(0xFF6A041D),
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+        child: SingleChildScrollView(
+          child: Text(
+              AppLocalizations.of(context)!.descriptionGreenTea,
+            style:const TextStyle(
+              color: Color(0xFF6A041D),
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
         ));
   }
+
   Widget _buildDescriptionSectionBlackTea() {
     return AnimatedContainer(
         padding: const EdgeInsets.all(20),
         key: _keyBlackTea,
         duration: const Duration(milliseconds: 300),
         height: _isExpandedBlackTea ? 200 : 1,
-        child: const SingleChildScrollView(child: Text(
-          'Description: Classic black tea, rich taste and aroma. Volume options: 1l and 1.5l. An excellent choice for any time of the day.',
-          style: TextStyle(
-            color: Color(0xFF6A041D),
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+        child: SingleChildScrollView(
+          child: Text(
+            AppLocalizations.of(context)!.descriptionBlackTea,
+            style:const TextStyle(
+              color: Color(0xFF6A041D),
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
         ));
   }
+
   Widget _buildDescriptionSectionMilkTea() {
     return AnimatedContainer(
         padding: const EdgeInsets.all(20),
         key: _keyMilkTea,
         duration: const Duration(milliseconds: 300),
         height: _isExpandedMilkTea ? 200 : 1,
-        child: const SingleChildScrollView(child: Text(
-          'Description: Fruit tea, perfect for cold days or before bed. A natural source of vitamins and antioxidants.',
-          style: TextStyle(
-            color: Color(0xFF6A041D),
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
+        child: SingleChildScrollView(
+          child: Text(
+              AppLocalizations.of(context)!.descriptionMilkTea,
+            style: const TextStyle(
+              color: Color(0xFF6A041D),
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
         ));
   }
 }
-

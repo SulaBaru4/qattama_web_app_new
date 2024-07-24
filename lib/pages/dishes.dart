@@ -19,7 +19,7 @@ class DishesPage extends StatelessWidget {
               fontFamily: 'Gothic'),
         ),
       ),
-      body: PositionsPage(),
+      body: const PositionsPage(),
     );
   }
 }
@@ -345,22 +345,22 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyManti,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedManti ? 300 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(children: [
             Text(
-              'Ата-бабаларыбыздын салты боюнча сүйүү менен, этинен жасалган манты',
-              style: TextStyle(
+              AppLocalizations.of(context)!.descriptionManti,
+              style: const TextStyle(
                   color: Color(0xFF6A041D),
                   fontSize: 24,
                   fontWeight: FontWeight.w500),
             ),
-            Divider(
+            const Divider(
               color: Colors.transparent,
             ),
             Text(
-              'Курамы: уй эти, пияз, камыр, картошка',
-              style: TextStyle(
+                AppLocalizations.of(context)!.ingredientsManti,
+              style: const TextStyle(
                   color: Color(0xFF6A041D),
                   fontSize: 24,
                   fontWeight: FontWeight.w500),
@@ -375,24 +375,13 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyKattama,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedKattama ? 170 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Кыргыздын улуттук наны Каттама.',
-              style: TextStyle(
-                color: Color(0xFF6A041D),
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Divider(
-              color: Colors.transparent,
-            ),
-            Text(
-              'Курамы: ун, суу,сары май, туз.',
-              style: TextStyle(
+            AppLocalizations.of(context)!.descriptionKattama,
+              style: const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
@@ -410,24 +399,24 @@ class _PositionsPageState extends State<PositionsPage> {
       key: _keyPelmeniSoup,
       duration: const Duration(milliseconds: 300),
       height: _isExpandedPelmeniSoup ? 250 : 0,
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Text(
-              'Description: In this soup, each dumpling is like a separate work of art, floating in a fragrant broth.',
-              style: TextStyle(
+            AppLocalizations.of(context)!.descriptionPelmeni,
+              style: const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Divider(
+            const Divider(
               color: Colors.transparent,
             ),
             Text(
-              'Ingredients: Fresh dumplings, aromatic broth, seasonings.',
-              style: TextStyle(
+                AppLocalizations.of(context)!.ingredientsPelmeni,
+              style:const TextStyle(
                 color: Color(0xFF6A041D),
                 fontSize: 24,
                 fontWeight: FontWeight.w500,
