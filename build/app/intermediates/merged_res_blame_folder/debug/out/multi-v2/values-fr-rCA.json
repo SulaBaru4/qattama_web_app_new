@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qattama_web_app-mergeDebugResources-5:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.example.qattama_web_app-mergeDebugResources-6:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\8b5cdc5b2a5b7e2b4667e9f619397c81\\transformed\\browser-1.5.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,162,264,383",
-                        "endColumns": "106,101,118,104",
-                        "endOffsets": "157,259,378,483"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "778,885,987,1106",
-                        "endColumns": "106,101,118,104",
-                        "endOffsets": "880,982,1101,1206"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\646b49a941bff928b0ff3098e4e836ee\\transformed\\core-1.13.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\6783078cb9aadbeee9dd18657afc9f20\\transformed\\core-1.13.1\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -30,11 +13,45 @@
                         "endOffsets": "148,250,349,451,555,659,773,874"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startLines": "2,3,4,5,6,7,8,14",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,1211",
+                        "startOffsets": "55,153,255,354,456,560,664,1372",
                         "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,1307"
+                        "endOffsets": "148,250,349,451,555,659,773,1468"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\bf0c0284552455ce0a9958a38e0b3fc5\\transformed\\browser-1.5.0\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,162,264,383",
+                        "endColumns": "106,101,118,104",
+                        "endOffsets": "157,259,378,483"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "939,1046,1148,1267",
+                        "endColumns": "106,101,118,104",
+                        "endOffsets": "1041,1143,1262,1367"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\0b7f63bc12d75bd6e3ee2e4cd90fa41f\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-fr-rCA\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "199",
+                        "endColumns": "156",
+                        "endOffsets": "355"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "778",
+                        "endColumns": "160",
+                        "endOffsets": "934"
                     }
                 }
             ]

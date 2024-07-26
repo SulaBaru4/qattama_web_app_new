@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.qattama_web_app-mergeDebugResources-5:/values-km/values-km.xml",
+            "outputFile": "com.example.qattama_web_app-mergeDebugResources-6:/values-km/values-km.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\646b49a941bff928b0ff3098e4e836ee\\transformed\\core-1.13.1\\res\\values-km\\values-km.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,150,253,351,451,552,664,776",
-                        "endColumns": "94,102,97,99,100,111,111,100",
-                        "endOffsets": "145,248,346,446,547,659,771,872"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,150,253,351,451,552,664,1203",
-                        "endColumns": "94,102,97,99,100,111,111,100",
-                        "endOffsets": "145,248,346,446,547,659,771,1299"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\8b5cdc5b2a5b7e2b4667e9f619397c81\\transformed\\browser-1.5.0\\res\\values-km\\values-km.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\bf0c0284552455ce0a9958a38e0b3fc5\\transformed\\browser-1.5.0\\res\\values-km\\values-km.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -30,11 +13,45 @@
                         "endOffsets": "147,244,377,477"
                     },
                     "to": {
-                        "startLines": "9,10,11,12",
+                        "startLines": "10,11,12,13",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "776,873,970,1103",
+                        "startOffsets": "925,1022,1119,1252",
                         "endColumns": "96,96,132,99",
-                        "endOffsets": "868,965,1098,1198"
+                        "endOffsets": "1017,1114,1247,1347"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\0b7f63bc12d75bd6e3ee2e4cd90fa41f\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-km\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "144",
+                        "endOffsets": "339"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "776",
+                        "endColumns": "148",
+                        "endOffsets": "920"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\6783078cb9aadbeee9dd18657afc9f20\\transformed\\core-1.13.1\\res\\values-km\\values-km.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,253,351,451,552,664,776",
+                        "endColumns": "94,102,97,99,100,111,111,100",
+                        "endOffsets": "145,248,346,446,547,659,771,872"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,253,351,451,552,664,1352",
+                        "endColumns": "94,102,97,99,100,111,111,100",
+                        "endOffsets": "145,248,346,446,547,659,771,1448"
                     }
                 }
             ]

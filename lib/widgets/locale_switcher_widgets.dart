@@ -14,10 +14,8 @@ class LocaleSwitcherWidgets extends StatelessWidget {
       child: DropdownButtonHideUnderline(
             child: DropdownButton(
               value: locale,
-              icon: Container(
-                width: 12,),
-
-              dropdownColor: Color(0xFF6A041D),
+              icon: const Icon(Icons.language, color: Color(0xFFEFDEBE),size: 32,),
+              dropdownColor: const Color(0xFF6A041D),
               items: AppLocalizations.supportedLocales.map(
                     (nextLocale) {
                   return DropdownMenuItem(
@@ -27,14 +25,14 @@ class LocaleSwitcherWidgets extends StatelessWidget {
                       provider.setLocale(nextLocale);
                     },
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                         decoration: BoxDecoration(
-                          color: Color(0xFF6A041D), // Задайте здесь желаемый цвет фона
+                          color: const Color(0xFF6A041D), // Задайте здесь желаемый цвет фона
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Center(
                           child: Text(getLanguageName(nextLocale),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color(0xFFEFDEBE),
                             fontSize: 32,
                             fontWeight: FontWeight.w400

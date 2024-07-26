@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:606234349671:android:26081ef88a5415afb244c2",
+        "android_client_info": {
+          "package_name": "com.example.qattama_web_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKofg46B7W5RQO4k3dPtTFcRX7qrBHh3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:606234349671:android:ca616136e0df8b34b244c2",
         "android_client_info": {
           "package_name": "qattama.app"

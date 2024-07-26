@@ -11,7 +11,6 @@ import 'package:qattama_web_app/pages/traditional_drinks.dart';
 import 'package:qattama_web_app/providers/locale_provider.dart';
 import 'package:qattama_web_app/widgets/locale_switcher_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
@@ -296,8 +295,6 @@ class SecondPage extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: double.infinity,
           child: Column(
             children: [
               Align(
@@ -525,20 +522,18 @@ class _ThirdPageState extends State<ThirdPage> {
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Expanded(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        child: Text(
-                          AppLocalizations.of(context)!.instagram,
-                          style: const TextStyle(
-                            color: Color(0xFF6A041D),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                          ),
-                          softWrap: true,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 4,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Text(
+                        AppLocalizations.of(context)!.instagram,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
                         ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
                       ),
                     ),
                   ),
@@ -572,20 +567,18 @@ class _ThirdPageState extends State<ThirdPage> {
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Expanded(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        child: Text(
-                          AppLocalizations.of(context)!.rateMap,
-                          style: const TextStyle(
-                            color: Color(0xFF6A041D),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                          ),
-                          softWrap: true,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 5,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Text(
+                        AppLocalizations.of(context)!.rateMap,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
                         ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
                       ),
                     ),
                   ),
@@ -619,21 +612,19 @@ class _ThirdPageState extends State<ThirdPage> {
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Expanded(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        // Ширина контейнера (настройте по мере необходимости)
-                        child: Text(
-                          AppLocalizations.of(context)!.developerContact,
-                          style: const TextStyle(
-                            color: Color(0xFF6A041D),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                          ),
-                          softWrap: true,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 4,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      // Ширина контейнера (настройте по мере необходимости)
+                      child: Text(
+                        AppLocalizations.of(context)!.developerContact,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
                         ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
                       ),
                     ),
                   ),
