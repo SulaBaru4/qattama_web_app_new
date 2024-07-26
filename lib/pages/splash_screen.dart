@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               child: RotationTransition(
                 turns: _controller,
                 child: const ImageIcon(
-                  AssetImage('assets/images/logo.png'),
+                  AssetImage('assets/images/logo.png'),size: 100,
                 ),
               ),
             ),

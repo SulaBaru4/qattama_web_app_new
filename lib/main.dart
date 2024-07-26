@@ -454,231 +454,231 @@ class ThirdPage extends StatefulWidget {
 class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
-            width: MediaQuery.of(context).size.width,
-            child: Center(
-              child: Text(
-                AppLocalizations.of(context)!.welcome,
-                style: const TextStyle(
-                  color: Color(0xFF6A041D),
-                  fontWeight: FontWeight.w600,
-                  fontSize: 30,
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Text(
+                  AppLocalizations.of(context)!.welcome,
+                  style: const TextStyle(
+                    color: Color(0xFF6A041D),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 30,
+                  ),
                 ),
               ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width,
-            child: Stack(
-              children: [
-                Align(
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Text(
+                          AppLocalizations.of(context)!.contact,
+                          style: const TextStyle(
+                            color: Color(0xFF6A041D),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 3,
+                        ),
+                      )),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://www.instagram.com/qattama_bish';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/whatsapp1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
                     alignment: Alignment.centerLeft,
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: Text(
-                        AppLocalizations.of(context)!.contact,
-                        style: const TextStyle(
-                          color: Color(0xFF6A041D),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
+                    child: Expanded(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Text(
+                          AppLocalizations.of(context)!.instagram,
+                          style: const TextStyle(
+                            color: Color(0xFF6A041D),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 4,
                         ),
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
                       ),
-                    )),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    onPressed: () async {
-                      const url = 'https://www.instagram.com/qattama_bish';
-                      if (await canLaunchUrlString(url)) {
-                        await launchUrlString(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                    icon: const ImageIcon(
-                      AssetImage('assets/images/whatsapp1.png'),
-                      size: 50,
-                      color: Color(0xFF6A041D),
                     ),
                   ),
-                ),
-              ],
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://www.instagram.com/qattama_bish';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/instagram1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Expanded(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: Text(
-                        AppLocalizations.of(context)!.instagram,
-                        style: const TextStyle(
-                          color: Color(0xFF6A041D),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Expanded(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Text(
+                          AppLocalizations.of(context)!.rateMap,
+                          style: const TextStyle(
+                            color: Color(0xFF6A041D),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 5,
                         ),
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 4,
                       ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    onPressed: () async {
-                      const url = 'https://www.instagram.com/qattama_bish';
-                      if (await canLaunchUrlString(url)) {
-                        await launchUrlString(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                    icon: const ImageIcon(
-                      AssetImage('assets/images/instagram1.png'),
-                      size: 50,
-                      color: Color(0xFF6A041D),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://2gis.kg/bishkek/firm/70000001049847928';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/twogis1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Expanded(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: Text(
-                        AppLocalizations.of(context)!.rateMap,
-                        style: const TextStyle(
-                          color: Color(0xFF6A041D),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Expanded(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        // Ширина контейнера (настройте по мере необходимости)
+                        child: Text(
+                          AppLocalizations.of(context)!.developerContact,
+                          style: const TextStyle(
+                            color: Color(0xFF6A041D),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 4,
                         ),
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 5,
                       ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    onPressed: () async {
-                      const url = 'https://2gis.kg/bishkek/firm/70000001049847928';
-                      if (await canLaunchUrlString(url)) {
-                        await launchUrlString(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                    icon: const ImageIcon(
-                      AssetImage('assets/images/twogis1.png'),
-                      size: 50,
-                      color: Color(0xFF6A041D),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            const url = 'https://www.linkedin.com/in/sultan-aitmatov-85a940315/';
+                            if (await canLaunchUrlString(url)) {
+                              await launchUrlString(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          icon: const ImageIcon(
+                            AssetImage('assets/images/linkedin1.png'),
+                            size: 50,
+                            color: Color(0xFF6A041D),
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            const url = 'https://t.me/+Ws4tH-QyUEBmOTE6';
+                            if (await canLaunchUrlString(url)) {
+                              await launchUrlString(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          icon: const Icon(
+                            Icons.telegram,
+                            size: 50,
+                            color: Color(0xFF6A041D),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Expanded(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      // Ширина контейнера (настройте по мере необходимости)
-                      child: Text(
-                        AppLocalizations.of(context)!.developerContact,
-                        style: const TextStyle(
-                          color: Color(0xFF6A041D),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                        ),
-                        softWrap: true,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 4,
-                      ),
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Row(
-                    children: [
-                      IconButton(
-                        onPressed: () async {
-                          const url = 'https://www.linkedin.com/in/sultan-aitmatov-85a940315/';
-                          if (await canLaunchUrlString(url)) {
-                            await launchUrlString(url);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                        icon: const ImageIcon(
-                          AssetImage('assets/images/linkedin1.png'),
-                          size: 50,
-                          color: Color(0xFF6A041D),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () async {
-                          const url = 'https://t.me/+Ws4tH-QyUEBmOTE6';
-                          if (await canLaunchUrlString(url)) {
-                            await launchUrlString(url);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                        icon: const Icon(
-                          Icons.telegram,
-                          size: 50,
-                          color: Color(0xFF6A041D),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+          ],
+        ),
     );
   }
 }
