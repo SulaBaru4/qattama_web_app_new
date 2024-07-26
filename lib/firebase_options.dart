@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'qattama-web-app.appspot.com',
     measurementId: 'G-ZDKYYK96GB',
   );
+
 }

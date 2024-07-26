@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:qattama_web_app/pages/dishes.dart';
 import 'package:qattama_web_app/pages/milk_positions.dart';
+import 'package:qattama_web_app/pages/splash_screen.dart';
 import 'package:qattama_web_app/pages/traditional_drinks.dart';
 import 'package:qattama_web_app/providers/locale_provider.dart';
 import 'package:qattama_web_app/widgets/locale_switcher_widgets.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
               child: child ?? const SizedBox.shrink(),
             );
           },
-          home: const SelectionPage(),
+          home: const SplashScreen(),
         );
       });
 }
@@ -296,20 +297,20 @@ class SecondPage extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: SizedBox(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height * 1.3,
+          height: double.infinity,
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topCenter,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.05,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   child: Center(
                     child: Text(
                       AppLocalizations.of(context)!.menu,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
-                        fontSize: 40,
+                        fontSize: 30,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
