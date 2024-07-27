@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:qattama_web_app/pages/dishes.dart';
+import 'package:qattama_web_app/pages/milk_positions.dart';
+import 'package:qattama_web_app/pages/splash_screen.dart';
+import 'package:qattama_web_app/pages/traditional_drinks.dart';
 import 'package:qattama_web_app/providers/locale_provider.dart';
 import 'package:qattama_web_app/widgets/locale_switcher_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +28,10 @@ class MyApp extends StatelessWidget {
         final provider = Provider.of<LocaleProvider>(context);
         return MaterialApp(
           title: 'Qattama',
-          theme: ThemeData(),
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(color: Color(0xFFEFDEBE), size: 30)),
+          ),
           supportedLocales: AppLocalizations.supportedLocales,
           locale: provider.locale,
           localizationsDelegates: const [
@@ -43,7 +51,7 @@ class MyApp extends StatelessWidget {
               child: child ?? const SizedBox.shrink(),
             );
           },
-          home: const SelectionPage(),
+          home: const SplashScreen(),
         );
       });
 }
@@ -55,9 +63,11 @@ class SelectionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: const [
-          LocaleSwitcherWidgets(),
-          SizedBox(
+        actions: [
+          const LocaleSwitcherWidgets(),
+          Container(
+            padding: const EdgeInsets.only(bottom: 5),
+            color: const Color(0xFF6A041D),
             width: 12,
           )
         ],
@@ -115,6 +125,15 @@ class _MainPageState extends State<MainPage> {
                 ),
                 child: const SecondPage(),
               ),
+              Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/art3.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: const ThirdPage(),
+              ),
             ],
           ),
         ),
@@ -125,7 +144,7 @@ class _MainPageState extends State<MainPage> {
           child: Center(
             child: SmoothPageIndicator(
               controller: _pageController,
-              count: 2, // Укажите количество страниц в PageView
+              count: 3, // Укажите количество страниц в PageView
               effect: const WormEffect(
                 dotHeight: 12,
                 dotWidth: 12,
@@ -149,7 +168,7 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -202,7 +221,7 @@ class _FirstPageState extends State<FirstPage> {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.30,
             width: MediaQuery.of(context).size.width,
             child: Stack(
@@ -275,39 +294,46 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height * 1.3,
+      child: SizedBox(
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topCenter,
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.05,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   child: Center(
                     child: Text(
                       AppLocalizations.of(context)!.menu,
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
-                        fontSize: 40,
+                        fontSize: 30,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/plow.jpg'),
-                          fit: BoxFit.fill),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DishesPage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage(
+                                'assets/images/food/mainfood/manti.png'),
+                            fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                 ),
@@ -326,18 +352,26 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage(
-                              'assets/images/snacks/traditionalsnacks/kurut.png'),
-                          fit: BoxFit.fill),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MilkPositions()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage(
+                                'assets/images/snacks/traditionalsnacks/kurut.png'),
+                            fit: BoxFit.fill),
+                      ),
                     ),
                   ),
                 ),
@@ -356,25 +390,33 @@ class SecondPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: 193 * 1.3,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      image: const DecorationImage(
-                          image: AssetImage('assets/images/kymyz.jpg'),
-                          fit: BoxFit.fill),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 5,
-                          blurRadius: 7,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TraditionalDrinksPage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 193 * 1.3,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        image: const DecorationImage(
+                            image: AssetImage('assets/images/kymyz.jpg'),
+                            fit: BoxFit.fill),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 5,
+                            blurRadius: 7,
+                            offset: const Offset(0, 3),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -395,6 +437,239 @@ class SecondPage extends StatelessWidget {
               ),
             ],
           )),
+    );
+  }
+}
+
+class ThirdPage extends StatefulWidget {
+  const ThirdPage({super.key});
+
+  @override
+  State<ThirdPage> createState() => _ThirdPageState();
+}
+
+class _ThirdPageState extends State<ThirdPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width,
+              child: Center(
+                child: Text(
+                  AppLocalizations.of(context)!.welcome,
+                  style: const TextStyle(
+                    color: Color(0xFF6A041D),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Text(
+                          AppLocalizations.of(context)!.contact,
+                          style: const TextStyle(
+                            color: Color(0xFF6A041D),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                          softWrap: true,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 3,
+                        ),
+                      )),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://www.instagram.com/qattama_bish';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/whatsapp1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Text(
+                        AppLocalizations.of(context)!.instagram,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://www.instagram.com/qattama_bish';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/instagram1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Text(
+                        AppLocalizations.of(context)!.rateMap,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () async {
+                        const url = 'https://2gis.kg/bishkek/firm/70000001049847928';
+                        if (await canLaunchUrlString(url)) {
+                          await launchUrlString(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      icon: const ImageIcon(
+                        AssetImage('assets/images/twogis1.png'),
+                        size: 50,
+                        color: Color(0xFF6A041D),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      // Ширина контейнера (настройте по мере необходимости)
+                      child: Text(
+                        AppLocalizations.of(context)!.developerContact,
+                        style: const TextStyle(
+                          color: Color(0xFF6A041D),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            const url = 'https://www.linkedin.com/in/sultan-aitmatov-85a940315/';
+                            if (await canLaunchUrlString(url)) {
+                              await launchUrlString(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          icon: const ImageIcon(
+                            AssetImage('assets/images/linkedin1.png'),
+                            size: 50,
+                            color: Color(0xFF6A041D),
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            const url = 'https://t.me/+Ws4tH-QyUEBmOTE6';
+                            if (await canLaunchUrlString(url)) {
+                              await launchUrlString(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
+                          icon: const Icon(
+                            Icons.telegram,
+                            size: 50,
+                            color: Color(0xFF6A041D),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
     );
   }
 }
