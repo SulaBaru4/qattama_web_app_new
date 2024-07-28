@@ -63,13 +63,8 @@ class SelectionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          const LocaleSwitcherWidgets(),
-          Container(
-            padding: const EdgeInsets.only(bottom: 5),
-            color: const Color(0xFF6A041D),
-            width: 12,
-          )
+        actions: const [
+          LocaleSwitcherWidgets(),
         ],
         title: const Text(
           'QATTAMA',
@@ -496,7 +491,7 @@ class _ThirdPageState extends State<ThirdPage> {
                     alignment: Alignment.centerRight,
                     child: IconButton(
                       onPressed: () async {
-                        const url = 'https://www.instagram.com/qattama_bish';
+                        const url = 'https://wa.me/qr/ZNRWUB74LXICK1';
                         if (await canLaunchUrlString(url)) {
                           await launchUrlString(url);
                         } else {

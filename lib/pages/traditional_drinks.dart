@@ -120,7 +120,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -134,7 +134,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -176,13 +176,13 @@ class _PositionsPageState extends State<PositionsPage> {
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                     const Icon(
                       Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
-                      size: 30,
+                      size: 22,
                     ),
                   ],
                 ),
@@ -198,7 +198,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -212,7 +212,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -226,7 +226,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -268,13 +268,13 @@ class _PositionsPageState extends State<PositionsPage> {
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                     const Icon(
                       Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
-                      size: 30,
+                      size: 22,
                     ),
                   ],
                 ),
@@ -290,7 +290,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -304,7 +304,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -318,7 +318,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -360,13 +360,13 @@ class _PositionsPageState extends State<PositionsPage> {
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                     const Icon(
                       Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
-                      size: 30,
+                      size: 22,
                     ),
                   ],
                 ),
@@ -382,7 +382,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -396,7 +396,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -410,7 +410,7 @@ class _PositionsPageState extends State<PositionsPage> {
                   style: const TextStyle(
                     color: Color(0xFF6A041D),
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 22,
                   ),
                 ),
               ),
@@ -452,13 +452,13 @@ class _PositionsPageState extends State<PositionsPage> {
                       style: const TextStyle(
                         color: Color(0xFF6A041D),
                         fontWeight: FontWeight.w500,
-                        fontSize: 30,
+                        fontSize: 22,
                       ),
                     ),
                     const Icon(
                       Icons.arrow_drop_down_sharp,
                       color: Color(0xFF6A041D),
-                      size: 30,
+                      size: 22,
                     ),
                   ],
                 ),
