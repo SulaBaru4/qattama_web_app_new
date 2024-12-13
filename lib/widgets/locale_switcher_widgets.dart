@@ -13,7 +13,6 @@ class LocaleSwitcherWidgets extends StatelessWidget {
     return Container(
       child: DropdownButtonHideUnderline(
             child: DropdownButton(
-              value: locale,
               icon: const Icon(Icons.language, color: Color(0xFFEFDEBE),size: 32,),
               dropdownColor: const Color(0xFF6A041D),
               items: AppLocalizations.supportedLocales.map(
